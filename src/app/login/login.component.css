@@ -1,0 +1,214 @@
+ /* Body Styles with Background Image */
+ body {
+    background: url('https://via.placeholder.com/1500') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Login Container Styles */
+  .login-container {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    padding: 30px;
+    max-width: 400px;
+    margin: 100px auto;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 24px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: white;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    box-shadow: 0 0 8px #ff758c;
+  }
+  
+  .btn-primary {
+    background: white;
+    color: #ff758c;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .btn-primary:hover {
+    background: #ff758c;
+    color: white;
+  }
+  
+  .error-message {
+    color: #ff2e63;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .register-link {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+  }
+  
+  .register-link a {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .register-link a:hover {
+    color: #ff2e63;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .login-container {
+      margin: 50px auto;
+      padding: 20px;
+    }
+  
+    .login-container h2 {
+      font-size: 20px;
+    }
+  
+    .btn-primary {
+      font-size: 14px;
+    }
+  }
+
+  
+
+.form-container {
+    /* width: 300px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    padding: 30px;
+    max-width: 400px;
+    margin: 100px auto;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease;
+
+  }
+  h2 {
+    text-align: center;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: 000;
+    backdrop-filter: blur 556px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background-color:palevioletred;
+  }
+  /* General Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  margin: 0 15px;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navbar-menu a:hover {
+  color: #ffcc00;
+}

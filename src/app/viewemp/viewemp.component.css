@@ -1,0 +1,178 @@
+/* Container */
+.employee-list-container {
+    margin: 20px auto;
+    padding: 40px;
+    max-width: 1200px;
+    background-color: linear-gradient(135deg,#f0f4f8,#d9e4f5);
+      min-height: 100vh;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI',  sans-serif;
+  }
+  /* Title */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+}
+  
+  /* Table */
+  .styled-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  /* Header Styling */
+  .styled-table thead tr {
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 16px;
+    border-bottom: 2px solid #0056b3;
+    text-align: center;
+  }
+  
+  /* Table Rows */
+  .styled-table th, .styled-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+     background-color: #f1f9ff;
+  transition: 0.3s ease;
+  }
+  
+  .styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #007BFF;
+  }
+  
+  .styled-table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Button Styling */
+  .btn {
+      padding: 8px 14px;
+  margin: 0 4px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  }
+  
+ /* Edit Button */
+.btn.edit {
+  background: linear-gradient(to right, #2196f3, #21cbf3);
+  color: white;
+}
+
+.btn.edit:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(33, 203, 243, 0.5);
+}
+
+/* Delete Button */
+.btn.delete {
+  background: linear-gradient(to right, #e53935, #e35d5b);
+  color: white;
+}
+
+.btn.delete:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(227, 93, 91, 0.5);
+}
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .styled-table {
+      font-size: 14px;
+    }
+    .btn {
+      font-size: 12px;
+      padding: 6px 10px;
+    }
+  }
+  
+
+   /* Add any additional CSS styling as needed */
+   .container {
+    padding: 20px;
+  }
+  
+  .styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+  }
+  
+  .styled-table th, .styled-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .styled-table th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .styled-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+    
+  }
+  .employee-table {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+  input {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .btn {
+    padding: 5px 10px;
+    margin: 2px;
+    cursor: pointer;
+  }
+  
+  .save-btn {
+    color: white;
+    background-color: green;
+  }
+  
+  .cancel-btn {
+    color: white;
+    background-color: gray;
+  }
+  
+  .edit-btn {
+    color: white;
+    background-color: blue;
+  }
+  
+  .delete-btn {
+    color: white;
+    background-color: red;
+    border: none;
+  }
+  

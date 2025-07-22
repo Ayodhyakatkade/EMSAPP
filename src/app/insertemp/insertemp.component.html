@@ -1,0 +1,108 @@
+<app-header></app-header>
+
+<div class="main-container">
+
+  <!-- Form Section -->
+  <div class="container">
+    <h2>Add Employee</h2>
+    <div class="form-container">
+      <form #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)">
+        <div>
+          <label for="employeeName">Name:</label>
+          <input
+            type="text"
+            id="employeeName"
+            name="employeeName"
+            [(ngModel)]="employee.employeeName"
+            required
+            minlength="3"
+          />
+        </div>
+
+        <div>
+          <label for="emailId">Email:</label>
+          <input
+            type="email"
+            id="emailId"
+            name="emailId"
+            [(ngModel)]="employee.emailId"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="employeePassword">Password:</label>
+          <input
+            type="password"
+            id="employeePassword"
+            name="employeePassword"
+            [(ngModel)]="employee.employeePassword"
+            required
+            minlength="8"
+          />
+        </div>
+
+        <div>
+          <label for="employeeContactNumber">Phone:</label>
+          <input
+            type="text"
+            id="employeeContactNumber"
+            name="employeeContactNumber"
+            [(ngModel)]="employee.employeeContactNumber"
+            required
+            pattern="[0-9]{10}"
+          />
+        </div>
+
+        <div>
+          <label for="employeeAddress">Address:</label>
+          <input
+            type="text"
+            id="employeeAddress"
+            name="employeeAddress"
+            [(ngModel)]="employee.employeeAddress"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="employeeGender">Gender:</label>
+          <select
+            id="employeeGender"
+            name="employeeGender"
+            [(ngModel)]="employee.employeeGender"
+            required
+          >
+            <option value="" disabled>Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="employeeDepartment">Department:</label>
+          <input
+            type="text"
+            id="employeeDepartment"
+            name="employeeDepartment"
+            [(ngModel)]="employee.employeeDepartment"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="employeeSkills">Skills:</label>
+          <input
+            type="text"
+            id="employeeSkills"
+            name="employeeSkills"
+            [(ngModel)]="employee.employeeSkills"
+            required
+          />
+        </div>
+
+        <button type="submit">Save</button>
+      </form>
+    </div>
+  </div>
+</div>

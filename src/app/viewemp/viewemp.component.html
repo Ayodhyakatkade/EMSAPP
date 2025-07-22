@@ -1,0 +1,109 @@
+
+<!-- <div class="container">
+    <h2>Employee List</h2>
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Contact Number</th>
+          <th>Address</th>
+          <th>Gender</th>
+          <th>Department</th>
+          <th>Skills</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{ employee.employeeId }}</td>
+          <td>{{ employee.employeeName }}</td>
+          <td>{{ employee.emailId }}</td>
+          <td>{{ employee.employeeContactNumber }}</td>
+          <td>{{ employee.employeeAddress }}</td>
+          <td>{{ employee.employeeGender }}</td>
+          <td>{{ employee.employeeDepartment }}</td>
+          <td>{{ employee.employeeSkills }}</td>
+          
+          <td>
+            <button class="btn edit-btn" (click)="loadEmployees()"><mat-icon>edit</mat-icon></button>
+            <button class="btn delete-btn" (click)="deleteEmployee(employee.employeeId)"><mat-icon>delete</mat-icon></button>
+         </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+   -->
+
+   <app-header></app-header>
+
+
+<div class="container">
+  <h2>Employee List</h2>
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Contact</th>
+        <th>Address</th>
+        <th>Gender</th>
+        <th>Department</th>
+        <th>Skills</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.employeeId }}</td>
+        <td>
+          <!-- Make the name editable only if it's the current employee being edited -->
+          <input *ngIf="editableEmployee && editableEmployee?.employeeId === employee.employeeId" [(ngModel)]="editableEmployee.employeeName" />
+
+
+          <span *ngIf="editableEmployee?.employeeId !== employee.employeeId">{{ employee.employeeName }}</span>
+        </td>
+        <td>
+          <input *ngIf="editableEmployee && editableEmployee?.employeeId === employee.employeeId" [(ngModel)]="editableEmployee.emailId" />
+          <span *ngIf="editableEmployee?.employeeId !== employee.employeeId">{{ employee.emailId }}</span>
+        </td>
+        <td>
+          <input *ngIf="editableEmployee && editableEmployee?.employeeId === employee.employeeId" [(ngModel)]="editableEmployee.employeeContactNumber" />
+          <span *ngIf="editableEmployee?.employeeId !== employee.employeeId">{{ employee.employeeContactNumber }}</span>
+        </td>
+        <td>
+          <input *ngIf="editableEmployee && editableEmployee?.employeeId === employee.employeeId" [(ngModel)]="editableEmployee.employeeAddress" />
+          <span *ngIf="editableEmployee?.employeeId !== employee.employeeId">{{ employee.employeeAddress }}</span>
+        </td>
+        <td>
+          <input *ngIf="editableEmployee && editableEmployee?.employeeId === employee.employeeId" [(ngModel)]="editableEmployee.employeeGender" />
+          <span *ngIf="editableEmployee?.employeeId !== employee.employeeId">{{ employee.employeeGender }}</span>
+        </td>
+        <td>
+          <input *ngIf="editableEmployee && editableEmployee?.employeeId === employee.employeeId" [(ngModel)]="editableEmployee.employeeDepartment" />
+          <span *ngIf="editableEmployee?.employeeId !== employee.employeeId">{{ employee.employeeDepartment }}</span>
+        </td>
+        <td>
+          <input *ngIf="editableEmployee && editableEmployee?.employeeId === employee.employeeId" [(ngModel)]="editableEmployee.employeeSkills" />
+          <span *ngIf="editableEmployee?.employeeId !== employee.employeeId">{{ employee.employeeSkills }}</span>
+        </td>
+        <td>
+          <button *ngIf="editableEmployee && editableEmployee?.employeeId === employee.employeeId" class="btn save-btn" (click)="saveEmployee(editableEmployee)">
+            Save
+          </button>
+          <button *ngIf="editableEmployee?.employeeId === employee.employeeId" class="btn cancel-btn" (click)="cancelEdit()">cancel</button>
+          <button *ngIf="editableEmployee?.employeeId !== employee.employeeId" class="btn edit-btn" (click)="editEmployee(employee)">
+            Edit
+          </button>
+          <button (click)="deleteEmployee(employee.employeeId)" class="delete-btn">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+

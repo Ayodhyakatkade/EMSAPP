@@ -1,0 +1,37 @@
+.about-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 40px 30px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
+  backdrop-filter: blur(80px); /* Optional: subtle blur effect for background */
+  border-radius: 10px;
+}
+
+.about-container h2 {
+  color: orange;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-container h3 {
+  color: orange;
+  margin-top: 30px;
+  font-size: 1.5rem;
+}
+
+.about-container p,
+.about-container ul {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.about-container ul {
+  margin-left: 20px;
+}
+
+.about-container li {
+  margin-bottom: 10px;
+}

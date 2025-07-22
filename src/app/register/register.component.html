@@ -1,0 +1,55 @@
+
+<nav class="navbar">
+  <div class="navbar-container">
+    <a class="navbar-brand" href="#">
+      EMSApp</a>
+    <ul class="navbar-menu">
+      
+      <li><a routerLink="/login">Welcome admin     logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="form-container">
+    <h2>Register</h2>
+    <form (ngSubmit)="register()">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          [(ngModel)]="user.name"
+          minlength="3"
+          maxlength="20"
+          pattern="[a-zA-Z ]+"
+          required
+          name="name"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="email"><i class="fa-solid fa-envelope"></i>Email:</label>
+        <input
+          type="email"
+          id="email"
+          [(ngModel)]="user.email"
+          name="email"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="password"><i class="fa-solid fa-lock"></i>Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="user.password"
+          minlength="8"
+          required
+        />
+      </div>
+      <button type="submit" class="btn">Register</button>
+    </form>
+  </div>
+  
